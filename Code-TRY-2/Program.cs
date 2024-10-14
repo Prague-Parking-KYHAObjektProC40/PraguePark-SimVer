@@ -1,13 +1,14 @@
 ﻿using System;
-
 public class Program
+
 {
-    static Dictionary<string, string> cars = new Dictionary<string, string>();
     public static void Main()
+
     {
         bool running = true;
 
         while (running)
+
         {
             Console.WriteLine("\n|------------------------------------|");
             Console.WriteLine("|Program alternativ:                 |");
@@ -26,44 +27,56 @@ public class Program
             Console.WriteLine("\n\n");
 
             if (string.IsNullOrEmpty(choice))
+
             {
                 Console.WriteLine("Inmatningen är tom, försök igen.");
             }
-            else if(choice.Equals("M1", StringComparison.OrdinalIgnoreCase))
+
+            else if (choice.Equals("M1", StringComparison.OrdinalIgnoreCase))
             {
+
                 Console.WriteLine("Du valde meny 1\n\n");
 
-                Console.WriteLine("Enter car owner's name: ");
-                string owner = Console.ReadLine();
-                Console.WriteLine("Enter car registration number: ");
-                string regNumber = Console.ReadLine();
-                cars[owner] = regNumber; // Store the car registration number for this owner
-                Console.WriteLine("Car registration saved.");
-
             }
+
+
 
             else if (choice.Equals("M2", StringComparison.OrdinalIgnoreCase))
             {
+
                 Console.WriteLine("Du valde meny 2\n\n");
+
             }
+
+
 
             else if (choice.Equals("M3", StringComparison.OrdinalIgnoreCase))
             {
+
                 Console.WriteLine("Du valde meny 3\n\n");
+
             }
 
-
             else if (choice.Equals("M4", StringComparison.OrdinalIgnoreCase))
+
             {
+
                 Console.WriteLine("Du valde meny 4\n");
                 Console.WriteLine("Avslutar programmet...");
+
                 running = false;
-                }
+
+            }
 
             else
             {
+
                 Console.WriteLine("Ogiltigt val, försök igen.");
+
             }
+
         }
+
     }
+
 }
